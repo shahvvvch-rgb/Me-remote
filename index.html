@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Remote — панель</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="shell">
+  <header><div class="brand"><span class="orb"></span><div><b>MY REMOTE</b><small>REMOTE SUPPORT PANEL</small></div></div><span class="tag">CONSENT MODE</span></header>
+  <section id="login" class="panel login">
+    <p class="eyebrow">ЗАЩИЩЁННЫЙ ДОСТУП</p><h1>Вход в панель</h1><p class="muted">Введите пароль, чтобы открыть управление сеансами.</p>
+    <form id="loginForm"><input id="password" type="password" placeholder="Пароль панели" autocomplete="current-password" required><button>Войти <span>→</span></button></form>
+    <p id="loginError" class="error"></p>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="welcome"><div><p class="eyebrow">РАБОЧЕЕ ПРОСТРАНСТВО</p><h1>Сеансы поддержки</h1><p class="muted">Создайте одноразовую ссылку и отправьте её владельцу устройства.</p></div><button id="logout" class="ghost">Выйти</button></div>
+    <div class="panel create"><div><b>Новый сеанс</b><p class="muted">Получатель сам решает, начинать ли демонстрацию экрана.</p></div><button id="createRoom">＋ Создать ссылку</button></div>
+    <div id="newLink" class="panel linkbox" hidden><p class="eyebrow">ССЫЛКА ДЛЯ ПОЛУЧАТЕЛЯ</p><div class="linkrow"><input id="joinLink" readonly><button id="copyLink" class="ghost">Копировать</button></div><p class="muted tiny">Отправьте ссылку человеку, который согласен показать свой экран.</p></div>
+    <h2>Активные сеансы</h2><div id="rooms" class="rooms"><p class="muted">Пока нет сеансов.</p></div>
+  </section>
+  <footer>Экран передаётся только после явного согласия владельца устройства.</footer>
+</main>
+<script src="/app.js"></script>
+</body></html>
